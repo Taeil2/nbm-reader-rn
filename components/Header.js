@@ -1,5 +1,4 @@
-import { FlatList, ScrollView, TouchableOpacity } from 'react-native';
-import { Text, View } from '../components/Themed';
+import { View, Text, FlatList, ScrollView, TouchableOpacity } from 'react-native';
 
 import styled from 'styled-components/native';
 

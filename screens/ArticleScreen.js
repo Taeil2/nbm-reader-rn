@@ -3,7 +3,8 @@ import { View } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 export default function ArticleScreen(props) {
-  console.log('url', props.route.params.url);
+  const { route } = props;
+  console.log('url', route.params.url);
 
   return (
     <View style={{ flex: 1 }}>

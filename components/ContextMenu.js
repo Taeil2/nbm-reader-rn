@@ -17,7 +17,7 @@ const ContextMenu = () => {
 const Menu = styled.FlatList`
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 40px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #fff;

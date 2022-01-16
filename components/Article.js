@@ -52,4 +52,5 @@ const MenuButton = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 `;

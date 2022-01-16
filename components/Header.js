@@ -5,8 +5,6 @@ import styled from 'styled-components/native';
 const categories = ['Technology', 'Business', 'News', 'Entertainment', 'Fitness', 'Health', 'Culture', 'Style'];
 
 export default function Header(props) {
-  console.log('header props', props);
-  
   return (
     <StyledView>
       <Logo><LogoName>NBM</LogoName></Logo>

@@ -9,6 +9,10 @@ import { useState } from 'react';
 export default function Article() {
   const [ showMenu, setShowMenu ] = useState(false);
 
+  const handleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return <StyledArticle>
     <ImagePlaceholder />
     <Content>
@@ -16,7 +20,7 @@ export default function Article() {
       <Text>Headline Lorem ipsum dolor sit amet, consectetur adipiscing elit</Text>
       <Text>16 hours ago • Author Name</Text>
     </Content>
-    <MenuButton onPress={() => setShowMenu(true)}><FontAwesomeIcon icon={faEllipsisV} /></MenuButton>
+    <MenuButton onPress={handleMenu}><FontAwesomeIcon icon={faEllipsisV} /></MenuButton>
     {showMenu && <ContextMenu />}
   </StyledArticle>
 };

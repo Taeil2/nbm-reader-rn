@@ -8,7 +8,6 @@ import ArticleScreen from './screens/ArticleScreen';
 import CollectionScreen from './screens/CollectionScreen';
 import NotFoundScreen from './screens/NotFoundScreen';
 import SettingsScreen from './screens/SettingsScreen';
-import Header from './components/Header';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faReadme } from '@fortawesome/free-brands-svg-icons';
@@ -25,8 +24,8 @@ function Home() {
         component={ReadScreen}
         options={( navigation ) => ({
           tabBarIcon: ({ color }) => <FontAwesomeIcon icon={faReadme} color={color} size={30} style={{ marginBottom: -3 }} />,
-          header: (props) => <Header {...props} />,
         })}
+        options={{ headerShown: false }}
       />
       <Tab.Screen
         name="Collection"

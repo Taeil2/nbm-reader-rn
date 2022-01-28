@@ -2,9 +2,11 @@ import { View, Text, FlatList, ScrollView, TouchableOpacity } from 'react-native
 
 import styled from 'styled-components/native';
 
-const categories = ['Technology', 'Business', 'News', 'Entertainment', 'Fitness', 'Health', 'Culture', 'Style'];
+const categories = ['technology', 'business', 'news', 'entertainment', 'fitness', 'health', 'culture', 'style'];
 
-export default function Header(props) {
+export default function ReadHeader(props) {
+  const { setActiveNav } = props;
+
   return (
     <StyledView>
       <Logo><LogoName>NBM</LogoName></Logo>
@@ -12,7 +14,9 @@ export default function Header(props) {
         data={categories}
         horizontal={true}
         renderItem={({item, index, separators}) => (
-          <StyledButton key={index}><Text>{item}</Text></StyledButton>
+          <StyledButton key={index} onPress={() => setActiveNav(item)} >
+            <Text>{item.charAt(0).toUpperCase() + item.slice(1)}</Text>
+          </StyledButton>
         )}
       />
     </StyledView>
